@@ -57,8 +57,15 @@ body {
   margin: 0 0.5%;
   position: relative;
   width: 7.3%;
-
+  transition: all 250ms linear;
   background-color: rgba(204, 204, 204, 0);
+}
+
+.chart__item:hover,
+.chart__item:focus,
+.chart__item:active {
+	
+	background-color:#878a97;
 }
 
 .chart__link,
@@ -74,8 +81,13 @@ body {
   bottom: -1.7em;
   position: absolute;
   width: 100%;
-
   text-align: center;
+  transition: all 250ms linear;
+}
+
+.chart__item:hover .chart__label{
+	color:#fff;
+	
 }
 
 .chart__bar-wrap {
@@ -90,8 +102,11 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-
   background-color: rgba(127, 219, 255, 0.6);
+}
+
+.chart__item:hover .chart__bar {
+	background-color:#87d6fe;
 }
 
 .chart__count {
@@ -103,12 +118,19 @@ body {
   top: -2em;
   width: 4.6em;
   z-index: 1;
-
+  transition:all 300ms linear;
   background-color: #000;
   border-radius: 6px;
   opacity: 0;
-
   text-align: center;
+}
+
+.chart__item:hover .chart__count { 
+	opacity:1;
+	top:-4em;
+	
+	
+	
 }
 
 .chart__count::after {
